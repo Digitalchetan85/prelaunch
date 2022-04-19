@@ -6,7 +6,7 @@ import axios from "axios";
 import Logo from "../../images/logo-1.png";
 import {useNavigate} from "react-router-dom";
 
-const ContactModal = (props) => {
+const ValmarkApasModal = (props) => {
   const [formStatus, setformStatus] = useState("");
   const navigate = useNavigate("/success");
 
@@ -68,6 +68,7 @@ const ContactModal = (props) => {
         setformStatus(error.data);
       });
   };
+  
   return (
     <div>
       <Modal show={props.show} onHide={props.handleClose} centered id="cre">
@@ -221,4 +222,4 @@ const ContactModal = (props) => {
   );
 };
 
-export default ContactModal;
+export default ValmarkApasModal;

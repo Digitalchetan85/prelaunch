@@ -4,11 +4,9 @@ import OwlCarousel from "react-owl-carousel2";
 import "react-owl-carousel2/src/owl.carousel.css";
 import "react-owl-carousel2/src/owl.theme.default.css";
 import { Link } from "react-router-dom";
-import Image1 from "../../images/slider/aspen-greens/aspen-greens-1.png";
 import Image2 from "../../images/slider/avalon-park/avalon-park-1.png";
-import Image3 from "../../images/slider/eden-park/eden-park-2.png";
+import Image3 from "../../images/slider/eden-park/prestige-1.png";
 import Image4 from "../../images/slider/meridian/image-1.png";
-import Image5 from "../../images/slider/the-great-acres/the-great-acres-4.png";
 
 const MainSlider = () => {
   const associations = [
@@ -16,8 +14,8 @@ const MainSlider = () => {
       id: 1,
       ImageUrl: Image2,
       alt: "",
-      link: "/projects/avalon-park",
-      title: "Avalon Park - Prestige City",
+      link: "/projects/valmark-apas",
+      title: "Valmark Apas",
       specification: "3 & 4BHK Apartments",
       price: "79.99L* Onwards",
     },
@@ -25,8 +23,8 @@ const MainSlider = () => {
       id: 2,
       ImageUrl: Image4,
       alt: "",
-      link: "/projects/meridian-park",
-      title: "Meridian Park - Prestige City",
+      link: "/projects/mahindra-eden",
+      title: "Mahindra Eden",
       specification: "Excl. 3BHK Apartments",
       price: "87L* Onwards",
     },
@@ -34,28 +32,10 @@ const MainSlider = () => {
       id: 3,
       ImageUrl: Image3,
       alt: "",
-      link: "/projects/eden-park",
-      title: "Eden Park - Prestige City",
+      link: "/projects/purva-sparklings",
+      title: "Purva Sparklings",
       specification: "1 & 2BHK Apartments",
       price: "39.99L* Onwards",
-    },
-    {
-      id: 4,
-      ImageUrl: Image1,
-      alt: "",
-      link: "/projects/aspen-greens",
-      title: "Aspen Greens - Prestige City",
-      specification: "4BHK Villas",
-      price: "3.2Cr* Onwards",
-    },
-    {
-      id: 5,
-      ImageUrl: Image5,
-      alt: "",
-      link: "/projects/great-acres",
-      title: "Great Acres - Prestige City",
-      specification: "Plots",
-      price: "79.99L* Onwards",
     },
   ];
 

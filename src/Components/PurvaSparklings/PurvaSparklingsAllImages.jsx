@@ -1,5 +1,4 @@
-import React from "react";
-import { Row, Col, Image } from "react-bootstrap";
+import { Container, Row, Col, Image } from "react-bootstrap";
 import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox";
 import MasterPlan from "../../images/projects/eden-park/masterplan.png"
 import NumberingPlan from "../../images/projects/eden-park/numbering-plan.png"
@@ -13,8 +12,9 @@ import Image7 from "../../images/projects/eden-park/2BHK/type-b1-2-br-944-sq-ft.
 import Image8 from "../../images/projects/eden-park/2BHK/type-b2-2-br-971-sq-ft.jpeg";
 import Image9 from "../../images/projects/eden-park/2BHK/type-b3-2-br-974-sq-ft.jpeg";
 
-const EdenParkPlans = () => {
-  const ThreeBHKImages = [
+
+const PurvaSparklingsAllImages = () => {
+  const images = [
     { id: 1, imgName: MasterPlan, alt: "", tag: "Master Plan" },
     { id: 2, imgName: NumberingPlan, alt: "", tag: "Numbering Plan" },
     { id: 3, imgName: Image1, alt: "", tag: "Type A1 - 634Sq.ft" },
@@ -23,18 +23,19 @@ const EdenParkPlans = () => {
     { id: 6, imgName: Image4, alt: "", tag: "Type A4 - 649Sq.ft" },
     { id: 7, imgName: Image5, alt: "", tag: "Type A5 - 666Sq.ft" },
     { id: 8, imgName: Image6, alt: "", tag: "Type A3 - 643Sq.ft" },
-    { id: 8, imgName: Image7, alt: "", tag: "Type B1 - 944Sq.ft" },
-    { id: 8, imgName: Image8, alt: "", tag: "Type B2 - 971Sq.ft" },
-    { id: 8, imgName: Image9, alt: "", tag: "Type B3 - 974Sq.ft" },
+    { id: 9, imgName: Image7, alt: "", tag: "Type B1 - 944Sq.ft" },
+    { id: 10, imgName: Image8, alt: "", tag: "Type B2 - 971Sq.ft" },
+    { id: 11, imgName: Image9, alt: "", tag: "Type B3 - 974Sq.ft" },
   ];
 
   return (
     <div>
-      <SimpleReactLightbox>
+      <Container fluid className="ps-0 pe-0">
+        <SimpleReactLightbox>
           <SRLWrapper>
-            <Row className="g-3">
-              {ThreeBHKImages.map((item) => (
-                <Col md={3} xs={6} sm={6} key={item.id}>
+            <Row className="g-3 justify-content-center">
+              {images.map((item) => (
+                <Col md={4} xs={6} sm={6} key={item.id}>
                   <div className="m-1 text-center border border-dark p-1 rounded">
                     <a href={item.imgName}>
                       <Image
@@ -50,8 +51,9 @@ const EdenParkPlans = () => {
             </Row>
           </SRLWrapper>
         </SimpleReactLightbox>
+      </Container>
     </div>
   );
 };
 
-export default EdenParkPlans;
+export default PurvaSparklingsAllImages;

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Col, Container, Row, Tab, Table, Tabs } from "react-bootstrap";
+import { Button,  Container,  Tab, Table, Tabs } from "react-bootstrap";
 import Modals from "./Modals";
 
 const Pricing = () => {
@@ -10,7 +10,7 @@ const Pricing = () => {
   return (
     <div id="pricing" className="bg-light">
       <Container fluid className="ps-0 pe-0">
-        <h2 className="text-primary text-center py-2 fs-3">Prestige City Pricing</h2>
+        <h2 className="text-primary text-center py-2 fs-3">Projects Pricing</h2>
         <Tabs
           defaultActiveKey="home"
           id="uncontrolled-tab-example"

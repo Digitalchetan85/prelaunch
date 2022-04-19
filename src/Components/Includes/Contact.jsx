@@ -27,34 +27,41 @@ const Contact = () => {
   });
 
   const onSubmit = (values) => {
-    // const data = "";
+    let data = values;
 
-    let data = {
-      apikey: "897ec314-c85b-4291-96ee-48648d5dcfbd",
-      firstname: values.name,
-      lastname: "",
-      source: "Prestige City",
-      mobile: values.phone,
-      CreatedDate: "17/02/2022",
-      email: values.email,
-      Remark: "Brochure Downloaded",
-      ProjectUID: "2597B322-F920-442A-9050-127AFD565726",
-    }
-
-    // console.log(data);
+    console.log(data);
 
     axios
-      .post("https://buildeskapi.azurewebsites.net/api/Webhook", data
+      .get(
+        "https://mahindra-eden.prelaunchprop.in/Email/email.php?sendto=" +
+          data.email +
+          "&name=" +
+          data.name +
+          "&phone=" +
+          data.phone
       )
       .then(function (response) {
-        if (response.data.Success) {
-          setformStatus("Thanks for contacting us. We will get back to you soon.");
-        } else {
-          setformStatus("Sorry!!! Something went wrong. Please try again")
-        }
+        // console.log(response);
+        setformStatus(response.data);
+        axios.post(
+          "https://buildeskapi.azurewebsites.net/api/Webhook",
+          (data = {
+            apikey: "902cb429-2dcc-4176-9958-a8610a354817",
+            firstname: data.name,
+            lastname: "",
+            source: "Pre-Launch Prop",
+            mobile: data.phone,
+            CreatedDate: "14/02/2022",
+            email: data.email,
+            Remark: "Brochure Downloaded",
+            HasVisitScheduled: "false",
+            VisitDate: "null",
+          })
+        );
       })
       .catch(function (error) {
-        setformStatus("Sorry!!! Something went wrong. Please try again")
+        // console.log(error);
+        setformStatus(error.data);
       });
   };
   return (
@@ -75,10 +82,10 @@ const Contact = () => {
                   <Col md={12}>
                     <div className="mb-3">
                       <a
-                        href="tel:08095999000"
+                        href="tel:08147203771"
                         className="btn btn-dark form-control fw-bold py-2"
                       >
-                        <i className="fa fa-phone-volume"></i> +91 80959 99000
+                        <i className="fa fa-phone-volume"></i> +91 81472 03771
                       </a>
                     </div>
                   </Col>

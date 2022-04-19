@@ -6,7 +6,7 @@ import axios from "axios";
 import Logo from "../../images/logo-1.png";
 import {useNavigate} from "react-router-dom";
 
-const ContactModal = (props) => {
+const PurvaSparklingsModal = (props) => {
   const [formStatus, setformStatus] = useState("");
   const navigate = useNavigate("/success");
 
@@ -221,4 +221,4 @@ const ContactModal = (props) => {
   );
 };
 
-export default ContactModal;
+export default PurvaSparklingsModal;
