@@ -8,9 +8,9 @@ import {
   
 } from "react-bootstrap";
 import { Link } from 'react-router-dom';
-import image1 from "../../images/slider/meridian/image-1.png"
-import image2 from "../../images/slider/eden-park/prestige.png"
-import image3 from "../../images/slider/avalon-park/avalon-park-2.png"
+import image1 from "../../images/slider/mahindra-eden.png"
+import image2 from "../../images/slider/purva-sparkling-springs.png"
+import image3 from "../../images/slider/valmark-apas.png"
 
 
 const Projects = () => {
@@ -19,7 +19,7 @@ const Projects = () => {
     title: "Mahindra Eden",
     description: "1, 2 & 3 BHK Appartments",
     imageurl: image1,
-    link: "/projects/mahindra-eden",
+    link: "https://mahindra-eden.prelaunchprop.in",
     status:"New Launch"
 
 },
@@ -27,14 +27,14 @@ const Projects = () => {
     title: "Purva Sparklings",
     description: "3 & 4BHK Luxurious Villas",
     imageurl: image2,
-    link: "/projects/purva-sparklings",
+    link: "https://purva-sparkling-springs.prelaunchprop.in",
     status:"New Launch"
 },
 { id: 3, 
     title: "Valmark Apas",
     description: "3/4 BHK Appartments",
     imageurl: image3,
-    link: "/projects/valmark-apas",
+    link: "https://valmark-apas.prelaunchprop.in",
     status:"New Launch"
 },
 ];
@@ -52,14 +52,13 @@ const Projects = () => {
                   <h2 className="fs-4">{project.title}</h2>
                   <h3 className="fs-5">{project.description}</h3>
                   <div className="text-center">
-                  <Button
-                    variant="primary"
+                  <a
                     as={Link}
-                    to={project.link}
-                    className=""
+                    href={project.link}
+                    className="btn btn-primary"
                   >
                     Read More
-                  </Button>
+                  </a>
                   </div>
                 </Card.Body>
               </Card>

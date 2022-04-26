@@ -4,9 +4,9 @@ import OwlCarousel from "react-owl-carousel2";
 import "react-owl-carousel2/src/owl.carousel.css";
 import "react-owl-carousel2/src/owl.theme.default.css";
 import { Link } from "react-router-dom";
-import Image2 from "../../images/slider/avalon-park/avalon-park-1.png";
-import Image3 from "../../images/slider/eden-park/prestige-1.png";
-import Image4 from "../../images/slider/meridian/image-1.png";
+import Image2 from "../../images/slider/slider/valmark-apas.png";
+import Image3 from "../../images/slider/slider/mahindra-eden.png";
+import Image4 from "../../images/slider/slider/purva-sparkling-springs.png";
 
 const MainSlider = () => {
   const associations = [
@@ -14,7 +14,7 @@ const MainSlider = () => {
       id: 1,
       ImageUrl: Image2,
       alt: "",
-      link: "/projects/valmark-apas",
+      link: "https://valmark-apas.prelaunchprop.in",
       title: "Valmark Apas",
       specification: "3 & 4BHK Apartments",
       price: "79.99L* Onwards",
@@ -23,19 +23,19 @@ const MainSlider = () => {
       id: 2,
       ImageUrl: Image4,
       alt: "",
-      link: "/projects/mahindra-eden",
-      title: "Mahindra Eden",
-      specification: "Excl. 3BHK Apartments",
-      price: "87L* Onwards",
+      link: "https://purva-sparkling-springs.prelaunchprop.in",
+      title: "Purva Sparklings",
+      specification: "1 & 2BHK Apartments",
+      price: "39.99L* Onwards",
     },
     {
       id: 3,
       ImageUrl: Image3,
       alt: "",
-      link: "/projects/purva-sparklings",
-      title: "Purva Sparklings",
-      specification: "1 & 2BHK Apartments",
-      price: "39.99L* Onwards",
+      link: "https://mahindra-eden.prelaunchprop.in",
+      title: "Mahindra Eden",
+      specification: "Excl. 3BHK Apartments",
+      price: "87L* Onwards",
     },
   ];
 
@@ -76,7 +76,7 @@ const MainSlider = () => {
                     />
                   </div>
                   <div className="position-absolute bottom-0 start-50 translate-middle-x bg-dark text-white p-2 opacity-75 text-center">
-                    <Link to={item.link} className="text-decoration-none text-white"><h2 className="opacity-100 fs-5 fw-bold">{item.title}</h2></Link>
+                    <a href={item.link} className="text-decoration-none text-white"><h2 className="opacity-100 fs-5 fw-bold">{item.title}</h2></a>
                     <h3 className="opacity-100 fs-6 fw-bold">{item.price}</h3>
                     <h3 className="fs-6">{item.specification}</h3>
                   </div>

@@ -37,7 +37,7 @@ const ContactModal = (props) => {
 
     axios
       .get(
-        "https://mahindra-eden.prelaunchprop.in/Email/email.php?sendto=" +
+        "https://prelaunchprop.in/Email/email.php?sendto=" +
           data.email +
           "&name=" +
           data.name +
@@ -77,9 +77,9 @@ const ContactModal = (props) => {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <div className="text-center py-3">
+          {/* <div className="text-center py-3">
             <Image src={Logo} alt="" className="img-fluid" />
-          </div>
+          </div> */}
 
           <Formik
             initialValues={initialValues}

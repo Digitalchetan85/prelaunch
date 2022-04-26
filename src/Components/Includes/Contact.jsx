@@ -33,7 +33,7 @@ const Contact = () => {
 
     axios
       .get(
-        "https://mahindra-eden.prelaunchprop.in/Email/email.php?sendto=" +
+        "https://prelaunchprop.in/Email/email.php?sendto=" +
           data.email +
           "&name=" +
           data.name +
